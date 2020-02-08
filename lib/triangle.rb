@@ -21,6 +21,8 @@ class Triangle
   end 
   
   def validate_triangle 
+    if @side_a + @side_b
+    
     
     
   end 

@@ -9,6 +9,7 @@ class Triangle
   end 
   
   def kind 
+    is_the_triangle_valid
     if @side_a == @side_b && @side_a == @side_c
       return :equilateral
       
@@ -20,11 +21,11 @@ class Triangle
     end 
   end 
   
-  def validate_triangle 
-    if !(@side_a + @side_b > @side_c)
-    
-    
-    
+  def is_the_triangle_valid 
+    if !(@side_a + @side_b > @side_c) || !(@side_a + @side_c > @side_b) || !(@side_b + @side_c > @side_a)
+      
+      raise TriangleError
+    end 
   end 
     
   

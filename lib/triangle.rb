@@ -21,7 +21,7 @@ class Triangle
   end 
   
   def validate_triangle 
-    if @side_a + @side_b
+    if !(@side_a + @side_b > @side_c)
     
     
     
